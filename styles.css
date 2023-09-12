@@ -1,0 +1,100 @@
+@import url('https://fonts.cdnfonts.com/css/calculator');
+
+@font-face {
+    font-family: 'Digital-7';
+    src: url('fonts/digital-7/digital-7.ttf') format('truetype'); /* Specify the font file path and format */
+}
+
+
+.calculator-container {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column; /* Arrange child elements vertically */
+    border: black solid 1px;
+    border-radius: 20px 20px 20px 20px;
+    width: 600px;
+    height: 800px;
+    justify-content: center; 
+    background: grey;
+}
+
+.calculator-screen-container {
+    font-family: 'Calculator', sans-serif;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column; /* Arrange child elements vertically */
+
+    border: black solid 1px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 20px 20px 0 20px;
+    width: auto;
+    height: 30%;
+
+    background: white;
+}
+
+.calculator-screen-top {
+    /* border: black solid 1px; */
+    text-align: right;
+    flex: 40%;
+    font-size: 3rem;
+}
+
+.calculator-screen-bottom {
+    /* border: black solid 1px; */
+    text-align: right;
+    flex: 60%;
+    font-size: 5rem;
+}
+
+.calculator-buttons-container {
+
+    display: grid;
+    /* Create 5 columns */
+    grid-template-columns: repeat(4, 1fr);
+    /* Move to next column from top to bottom */
+    grid-auto-flow: row;
+
+    /* Add gap between items (adjust as needed) */
+    grid-gap: 10px; 
+    /* Optionally set a max width or height to limit the size of the grid container */
+    max-width: 600px;
+    /* Specify any other styling for the container */
+    margin: 20px 20px 20px 20px;
+    
+    width: auto;
+    height: 70%;
+
+    justify-content: center; 
+
+}
+
+.btn {
+    border: black solid 1px;
+    border-radius: 10px 10px 10px 10px;
+    font-family: 'Calculator', sans-serif;
+    color: white;
+    background: darkgrey;
+    text-align: center; /* Align text horizontally to the center */
+    font-size: 5rem;
+    transition: transform 0.2s, background-color 0.2s;
+    user-select: none; /* Make the text not selectable */
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: translateY(2px); /* Move the button down slightly when pressed */
+    background-color: #999999; /* Change background color when pressed */
+}
+
+#btn-ac, #btn-c {
+    background: Maroon;
+}
+
+#btn-ac:active, #btn-c:active {
+    transform: translateY(2px); /* Move the button down slightly when pressed */
+    background: rgb(99, 0, 0);
+}
